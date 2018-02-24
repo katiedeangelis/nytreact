@@ -4,8 +4,9 @@
   "description": "A New York Times Article Search application. The app utilizes React components, helper/util functions, and the mounting lifecycle to query and display articles based on user searches. The application also uses Node, Express, and MongoDB so that users can save articles to read later.",
   "main": "server.js",
   "scripts": {
+    "client": "node scripts/start-client.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "concurrently \"nodemon server.js\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "cheerio": "^1.0.0-rc.2",
+    "concurrently": "^3.5.1",
     "express": "^4.16.2",
     "mongoose": "^5.0.7",
     "path": "^0.12.7",
