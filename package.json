@@ -1,0 +1,26 @@
+{
+  "name": "newyorktimesreact",
+  "version": "1.0.0",
+  "description": "A New York Times Article Search application. The app utilizes React components, helper/util functions, and the mounting lifecycle to query and display articles based on user searches. The application also uses Node, Express, and MongoDB so that users can save articles to read later.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katiedeangelis/nytreact.git"
+  },
+  "author": "Katie DeAngelis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/katiedeangelis/nytreact/issues"
+  },
+  "homepage": "https://github.com/katiedeangelis/nytreact#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.2",
+    "request": "^2.83.0"
+  }
+}
