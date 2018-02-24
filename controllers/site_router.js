@@ -2,19 +2,24 @@
 //                             Dependencies & Variables                              //
 ///////////////////////////////////////////////////////////////////////////////////////
 // Require express so we can make an express application
-var express = require("express");
+const express = require("express");
 // Parses our HTML and helps us find elements
-var cheerio = require("cheerio");
+const cheerio = require("cheerio");
 // Makes HTTP request for HTML page
-var request = require("request");
-
-var router = express.Router();
+const request = require("request");
+// Provides utilities for working with file and directory paths.
+const path = require("path");
+// Middle-ware style router
+const router = express.Router();
 
 ///////////////////////////////////////////////////////////////////////////////////////
 //                                     Get/Post                                      //
 ///////////////////////////////////////////////////////////////////////////////////////
 router.get("/", function (req, res) {
-    res.render("index");
+    res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
+///////////////////////////////////////////////////////////////////////////////////////
+//                                     Exports                                       //
+///////////////////////////////////////////////////////////////////////////////////////
 module.exports = router;
