@@ -1,0 +1,20 @@
+///////////////////////////////////////////////////////////////////////////////////////
+//                             Dependencies & Variables                              //
+///////////////////////////////////////////////////////////////////////////////////////
+// Require express so we can make an express application
+var express = require("express");
+// Parses our HTML and helps us find elements
+var cheerio = require("cheerio");
+// Makes HTTP request for HTML page
+var request = require("request");
+
+var router = express.Router();
+
+///////////////////////////////////////////////////////////////////////////////////////
+//                                     Get/Post                                      //
+///////////////////////////////////////////////////////////////////////////////////////
+router.get("/", function (req, res) {
+    res.render("index");
+});
+
+module.exports = router;
