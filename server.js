@@ -1,12 +1,13 @@
 ///////////////////////////////////////////////////////////////////////////////////////
 //                             Dependencies & Variables                              //
 ///////////////////////////////////////////////////////////////////////////////////////
-var express = require("express");
-var bodyParser = require("body-parser");
-var port = process.env.PORT || 8080;
+const express = require("express");
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+const port = process.env.PORT || 8080;
 // Import routes and give the server access to them.
-var routes = require("./controllers/site_router.js");
-var app = express();
+const routes = require("./controllers/site_router.js");
+const app = express();
 
 ///////////////////////////////////////////////////////////////////////////////////////
 //                               App & Database Config                               //
