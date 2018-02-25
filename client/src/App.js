@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import Header from "./components/Header";
 
 // The app component that is being rendered at the root in index.html
